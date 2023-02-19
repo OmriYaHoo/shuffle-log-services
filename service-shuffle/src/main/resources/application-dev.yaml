@@ -1,0 +1,4 @@
+logging-service:
+  url: http://localhost:8081
+logging:
+  config: classpath:./log4j2-dev.xml

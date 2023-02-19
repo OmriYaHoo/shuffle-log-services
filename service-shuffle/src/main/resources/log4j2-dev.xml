@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <springProfile name="dev">
+
+    </springProfile>
+    <Properties>
+    </Properties>
+    <Appenders>
+        <Console name="Console-Appender" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%style{Time=}{cyan}%style{[%d{yyyy-MM-dd HH:mm:ss.SSS}]}{magenta} , %style{LOGGING_LEVEL=}{cyan}%highlight{[%level]}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green, DEBUG=blue} , %style{Thread_Name=}{cyan}[%t] , %style{LOG_INVOCATION_LOCATION=}{cyan}[%l] , %style{Logged_User=}{cyan}[%X{Logged_User}] , %style{Message=}{cyan}[%m %exception] %n"
+                    disableAnsi="false">
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console-Appender"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -29,7 +29,9 @@ public class LogService {
                 .body(Mono.just(currentRequest), LoggingResult.class)
                 .retrieve()
                 .bodyToMono(String.class)
-                .subscribe();
+                .subscribe(response -> {
+                    log.info("Response from service-log {}", response);
+                });
     }
 
 }

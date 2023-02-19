@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/OmriYaHoo/config-server-demo
+  application:
+    name: service-config
+server:
+  port: 8887

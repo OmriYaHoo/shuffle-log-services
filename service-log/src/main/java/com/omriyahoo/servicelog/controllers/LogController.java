@@ -21,7 +21,7 @@ public class LogController {
 
     @PostMapping
     public ResponseEntity<String> printRequest(@RequestBody Map<String, Object> stringObjectMap) {
-        loggingService.logRequest(stringObjectMap);
-        return ResponseEntity.ok("Logging request submitted!");
+        String result = loggingService.logRequest(stringObjectMap);
+        return ResponseEntity.ok("Logging request submitted and result config is " + result);
     }
 }

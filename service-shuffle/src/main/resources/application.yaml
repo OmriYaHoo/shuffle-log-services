@@ -1,0 +1,7 @@
+logging-service:
+  url: http://localhost:8081
+spring:
+  application:
+    name: service-shuffle
+  config:
+    import: configserver:http://localhost:8887
